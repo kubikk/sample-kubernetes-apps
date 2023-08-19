@@ -11,6 +11,12 @@ spec:
     metadata:
       labels:
         app: nginx-basic
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "nginx-basic-app"
+        dapr.io/app-port: "80"
+        dapr.io/enable-api-logging: "true"
+        dapr.io/config: "appconfig"
     spec:
       containers:
       - name: nginx
